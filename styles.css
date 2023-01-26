@@ -1,0 +1,133 @@
+*, body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Open sans;
+    color: #676c88;
+}
+
+body, main{
+    min-height: 100vh;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+}
+
+:root {
+    --container_width: 100%;
+    --container_padding: 15px;
+    --container_left_space: calc((100% - var(--container_width)) / 2);
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    :root {
+      --container_width: 760px;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    :root {
+      --container_width: 1000px;
+    }
+  }
+  @media (min-width: 1200px) {
+    :root {
+      --container_width: 1190px;
+    }
+  }
+  @media (min-width: 1400px) {
+    :root {
+      --container_width: 1190px;
+    }
+  }
+  
+.container {
+    max-width: 100%;
+    width: 100%;
+    /* padding-inline: var(--container_padding); */
+    margin: auto;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.diff {
+    margin: 20px 0 10px 0;
+}
+
+pre, xmp{
+    font-family: monospace;
+    white-space: pre-line;
+}
+pre{
+    margin-bottom: 30px;
+}
+
+.pt_30{
+    padding-top: 30px;
+}
+
+.title{
+    padding: 30px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #eceeeb;
+}
+
+.page_flex {
+    display: flex;
+    gap: 30px;
+    min-height: calc(100vh - 104px);
+}
+.sidebar {
+    width: 300px;
+    background-color: #fafafa;
+    border-right: 1px solid #eceeeb;
+}
+.sidebar a {
+    display: block;
+    color: #676c88;
+    text-decoration: none;
+    padding: 12px 30px 12px 30px;
+    font-size: 18px;
+    border-bottom: 1px solid #eceeeb;
+    font-weight: 500;
+}
+
+.page_flex .content{
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+.side_title.active{
+    color: #000;
+}
+
+.tab_info{
+    display: none;
+}
+
+@media(max-width: 767px){
+    .sidebar{
+        max-width: 200px;
+        min-width: 120px;
+    }
+    .page_flex{
+        gap: 15px;
+    }
+    .page_flex .content{
+        padding-right: 15px;
+    }
+    .sidebar a {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
